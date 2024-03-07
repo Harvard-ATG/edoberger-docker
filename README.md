@@ -7,10 +7,10 @@ Docker image for running [pyraf](https://iraf-community.github.io/).
 To build and push a new image:
 
 ```
-$ docker build -t harvardat/pyraf .
-$ docker run --rm -it harvardat/pyraf:latest /bin/bash -c "pyraf --version"
+$ docker build -t huitacademictechnology/pyraf .
+$ docker run --rm -it huitacademictechnology/pyraf:latest /bin/bash -c "pyraf --version"
 $ docker login
-$ docker push harvardat/pyraf
+$ docker push huitacademictechnology/pyraf
 ```
 
 To run `pyraf` and use X apps, follow the instructions below.
@@ -83,8 +83,8 @@ Assumes you have [Docker Desktop for Mac](https://docs.docker.com/desktop/mac/in
     ```
 5. Start docker:
     ```
-    $ docker pull harvardat/pyraf:latest
-    $ docker run --rm -e DISPLAY=docker.for.mac.host.internal:0 -it harvardat/pyraf:latest /bin/tcsh
+    $ docker pull huitacademictechnology/pyraf:latest
+    $ docker run --rm -e DISPLAY=docker.for.mac.host.internal:0 -it huitacademictechnology/pyraf:latest /bin/tcsh
     ```
 6. Run an X11 app such as `xterm` or `xeyes`
     ```
@@ -111,8 +111,8 @@ Assumes you have an Ubuntu EC2 instance with [Docker Engine](https://docs.docker
     ```
 3. Start docker:
     ```
-    $ docker pull harvardat/pyraf:latest
-    $ docker run --rm -e DISPLAY --network host -v "$HOME/.Xauthority:/root/.Xauthority:rw" -it harvardat/pyraf:latest /bin/tcsh
+    $ docker pull huitacademictechnology/pyraf:latest
+    $ docker run --rm -e DISPLAY --network host -v "$HOME/.Xauthority:/root/.Xauthority:rw" -it huitacademictechnology/pyraf:latest /bin/tcsh
     ```
 4. Run an X11 app such as `xterm` or `xeyes`
     ```
