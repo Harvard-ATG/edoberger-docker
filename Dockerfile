@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 # Install system packages
 # NOTE: the 'unminimize' command installs the standard Ubuntu Server packages (including manpages).
@@ -41,4 +41,4 @@ RUN curl -sSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64
 
 # Setup Astroconda Environment
 RUN conda config --add channels http://ssb.stsci.edu/astroconda \
-    && conda create -y -n astroconda python=3.7 stsci 
+    && conda create -y -n astroconda python=3.7 stsci
